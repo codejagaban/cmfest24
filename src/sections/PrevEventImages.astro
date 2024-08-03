@@ -1,0 +1,80 @@
+---
+import { Image } from 'astro:assets';
+import imgOne from '../images/ImageOne.png';
+import imgTwo from '../images/ImageTwo.png';
+import imgThree from '../images/ImageThree.png';
+import imgFour from '../images/ImageFour.png';
+import imgFive from '../images/ImageFive.png';
+import imgSix from '../images/ImageSix.png';
+import imgSeven from '../images/ImageSeven.png';
+import imgEight from '../images/ImageEight.png';
+import imgNine from '../images/ImageNine.png';
+
+const prevImages = [
+  {
+    imageSrc: imgOne,
+    altText: 'ImageOne',
+  },
+  {
+    imageSrc: imgTwo,
+    altText: 'ImageTwo',
+  },
+  {
+    imageSrc: imgThree,
+    altText: 'ImageThree',
+  },
+  {
+    imageSrc: imgFour,
+    altText: 'ImageFour',
+  },
+  {
+    imageSrc: imgFive,
+    altText: 'ImageFive',
+  },
+  {
+    imageSrc: imgSix,
+    altText: 'ImageSix',
+  },
+  {
+    imageSrc: imgSeven,
+    altText: 'ImageSeven',
+  },
+  {
+    imageSrc: imgEight,
+    altText: 'ImageEight',
+  },
+  {
+    imageSrc: imgNine,
+    altText: 'ImageNine',
+  },
+];
+
+
+const firstColumn = prevImages.slice(0, 4);
+const secondColumn = prevImages.slice(4, 9);
+---
+
+<div class="flex flex-col gap-2 w-full bg-bg-primary overflow-hidden">
+  <div class="flex gap-1 w-full">
+    {firstColumn.map(({ imageSrc, altText }) => (
+      <div class="min-w-[25%]">
+        <Image
+          src={imageSrc}
+          alt={altText}
+          class="w-full rounded-sm object-cover h-40 sm:h-60 md:h-80"
+        />
+      </div>
+    ))}
+  </div>
+  <div class="flex gap-1 w-full">
+    {secondColumn.map(({ imageSrc, altText }) => (
+      <div class="min-w-[20%]">
+        <Image
+          src={imageSrc}
+          alt={altText}
+          class="w-full rounded-sm object-cover h-40 sm:h-60 md:h-80"
+        />
+      </div>
+    ))}
+  </div>
+</div>
