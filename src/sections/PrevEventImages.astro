@@ -1,43 +1,54 @@
 ---
 import { Image } from 'astro:assets';
+import imgOne from '/assets/ImageOne.png';
+import imgTwo from '/assets/ImageTwo.png';
+import imgThree from '/assets/ImageThree.png';
+import imgFour from '/assets/ImageFour.png';
+import imgFive from '/assets/ImageFive.png';
+import imgSix from '/assets/ImageSix.png';
+import imgSeven from '/assets/ImageSeven.png';
+import imgEight from '/assets/ImageEight.png';
+import imgNine from '/assets/ImageNine.png';
+
 const prevImages = [
   {
-    imageSrc: '/assets/ImageOne.png',
+    imageSrc: imgOne,
     altText: 'ImageOne',
   },
   {
-    imageSrc: '/assets/ImageTwo.png',
+    imageSrc: imgTwo,
     altText: 'ImageTwo',
   },
   {
-    imageSrc: '/assets/ImageThree.png',
+    imageSrc: imgThree,
     altText: 'ImageThree',
   },
   {
-    imageSrc: '/assets/ImageFour.png',
+    imageSrc: imgFour,
     altText: 'ImageFour',
   },
   {
-    imageSrc: '/assets/ImageFive.png',
+    imageSrc: imgFive,
     altText: 'ImageFive',
   },
   {
-    imageSrc: '/assets/ImageSix.png',
+    imageSrc: imgSix,
     altText: 'ImageSix',
   },
   {
-    imageSrc: '/assets/ImageSeven.png',
+    imageSrc: imgSeven,
     altText: 'ImageSeven',
   },
   {
-    imageSrc: '/assets/ImageEight.png',
+    imageSrc: imgEight,
     altText: 'ImageEight',
   },
   {
-    imageSrc: '/assets/ImageNine.png',
+    imageSrc: imgNine,
     altText: 'ImageNine',
   },
 ];
+
 
 const firstColumn = prevImages.slice(0, 4);
 const secondColumn = prevImages.slice(4, 9);
@@ -46,7 +57,7 @@ const secondColumn = prevImages.slice(4, 9);
 <div class="flex flex-col gap-2 w-full bg-bg-primary overflow-hidden">
   <div class="flex gap-1 w-full">
     {firstColumn.map(({ imageSrc, altText }) => (
-      <div class="min-w-[25%]" key={altText}>
+      <div class="min-w-[25%]">
         <Image
           src={imageSrc}
           alt={altText}
@@ -57,7 +68,7 @@ const secondColumn = prevImages.slice(4, 9);
   </div>
   <div class="flex gap-1 w-full">
     {secondColumn.map(({ imageSrc, altText }) => (
-      <div class="min-w-[20%]" key={altText}>
+      <div class="min-w-[20%]">
         <Image
           src={imageSrc}
           alt={altText}
