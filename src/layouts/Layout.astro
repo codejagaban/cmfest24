@@ -1,51 +1,55 @@
 ---
+import Header from '../sections/Header';
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
-
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body class="relative">
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Inter:wght@300..700&display=swap" rel="stylesheet">
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="relative">
+    <Header client:load />
+    <slot />
+  </body>
 </html>
 <style is:global>
-	:root {
-		--bg-primary: #121121;
-		--bg-light: #CCCCCC;
-		--bg-secondary: #F8F8FF;
-		--bg-azure: #018FFB;
-		--bg-bittersweet: #FD6A63;
-		--bg-turquoise-light: #FD6A63;
-		--text-turquoise: #04D5C9;
-		--text-goldenrod: #FDBF3D;
-		--text-primary: #F8F8FF;
-		--text-secondary: #121121;
-	}
-	html {
-		font-family: "Space Grotesk", sans-serif;
-		font-optical-sizing: auto;
-		background: var(--bg-secondary);
-		color: var(--text-secondary);
-	}
+  :root {
+    --bg-primary: #121121;
+    --bg-light: #CCCCCC;
+    --bg-secondary: #F8F8FF;
+    --bg-azure: #018FFB;
+    --bg-bittersweet: #FD6A63;
+    --bg-turquoise-light: #FD6A63;
+    --text-turquoise: #04D5C9;
+    --text-goldenrod: #FDBF3D;
+    --text-primary: #F8F8FF;
+    --text-secondary: #121121;
+  }
+  html {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+  }
 
-	body {
-		position: relative;
-		font-family: "Space Grotesk", sans-serif;
-		font-optical-sizing: auto;
-	}
-  
+  body {
+    position: relative;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Space Grotesk", sans-serif;
+  }
 </style>

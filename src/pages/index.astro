@@ -1,15 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../sections/Header.tsx";
 import Hero from "../sections/Hero.tsx";
-import PrevImage from "../sections/PrevImage.tsx";
+// import PrevEventImages from "../sections/PrevEventImages.astro";
 ---
 
-<Layout title="#CMFest24 || The festival for community managers.">
+<Layout title="#CMFest24 - The festival for community managers.">
   <main class="overflow-x-hidden relative">
-    <Header client:load />
     <Hero />
-    <PrevImage client:load />
+    <!-- <PrevEventImages client:load /> -->
   </main>
 </Layout>
 
