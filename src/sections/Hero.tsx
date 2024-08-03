@@ -5,10 +5,10 @@ export default function Hero() {
     <section className="flex flex-col gap-20 items-center justify-center bg-bg-primary h-[calc(100vh-100px)] relative z-10">
       <div className="container px-4 sm:px-6 md:px-10 flex flex-col items-center text-center max-w-3xl scale-105 md:scale-125">
         <div className="text-sm md:text-base font-semibold inline-flex bg-bg-secondary text-text-secondary rounded-lg px-3 md:px-6 py-1 tracking-tight">
-          OCT 12, 2024 | ANY VENUE IN LAGOS SHA, NIGERIA
+          Nov 02, 2024 | ANY VENUE IN LAGOS SHA, NIGERIA
         </div>
         <div className="my-6 flex flex-col gap-2 items-center">
-          <h1 className="text-5xl md:text-6xl font-bold tracking-tighter bg-gradient-to-b from-white to-[#f1f1f1] bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-white to-[#f1f1f1] bg-clip-text text-transparent !leading-[1.1]">
             Community <br />
             Managers Festival
           </h1>
