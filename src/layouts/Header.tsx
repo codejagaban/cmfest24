@@ -53,6 +53,9 @@ export default function Header() {
                   Agenda
                 </a>
                 <a href="#" onClick={() => setToggle(false)}>
+                  FAQ
+                </a>
+                <a href="#" onClick={() => setToggle(false)}>
                   Buy Tickets <span>&rarr;</span>
                 </a>
               </motion.nav>

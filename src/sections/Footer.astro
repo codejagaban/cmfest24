@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets";
+import Twitter from "../images/icons/twitter.svg";
+import Instagram from "../images/icons/instagram.svg";
+import Facebook from "../images/icons/facebook.svg";
+import Email from "../images/icons/email.svg";
+---
+
+<div class="w-full bg-bg-primary">
+  <div
+    class="container py-20 mx-auto max-w-7xl px-3 sm:px-6 md:px-10 flex flex-col items-center gap-6"
+  >
+    <div class="flex gap-6 flex-col items-center py-4">
+      <div class="flex items-center mb-3">
+        <nav class="grid grid-cols-4 md:grid-cols-6 items-center text-center gap-6 text-white text-base font-medium">
+          <a href="#">About</a>
+          <a href="#">Sponsors</a>
+          <a href="#">Speakers</a>
+          <a href="#">Agenda</a>
+          <a href="#">FAQ</a>
+          <a href="#" class="whitespace-nowrap"> Buy Tickets </a>
+        </nav>
+      </div>
+      <div class="flex gap-5 justify-between items-center">
+        <div class="bg-white p-2 rounded-full">
+          <Image src={Twitter} alt="Twitter" class="h-6 w-6 text-bg-primary" />
+        </div>
+        <div class="bg-white p-2 rounded-full">
+          <Image
+            src={Instagram}
+            alt="Instagram"
+            class="h-6 w-6 text-bg-primary"
+          />
+        </div>
+        <div class="bg-white p-2 rounded-full">
+          <Image
+            src={Facebook}
+            alt="Facebook"
+            class="h-6 w-6 text-bg-primary"
+          />
+        </div>
+        <div class="bg-white p-2 rounded-full">
+          <Image src={Email} alt="Email" class="h-6 w-6 text-bg-primary" />
+        </div>
+      </div>
+    </div>
+    <div class="bg-white w-full h-[2px]"/>
+    <div class="flex items-center py-4">
+      <p class="text-white text-base">All rights reserved &copy; 2024 CMFEST</p>
+    </div>
+  </div>
+</div>
