@@ -1,6 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import AboutCMFest from "../sections/AboutCMFest.astro";
 import Hero from "../sections/Hero.tsx";
+import FAQs from "../sections/FAQs.tsx";
+import PastFestival from "../sections/PastFestival.astro";
+import ThisYear from "../sections/ThisYear.astro";
+import Footer from "../sections/Footer.astro";
 import PrevEventImages from "../sections/PrevEventImages.astro";
 ---
 
@@ -8,6 +13,11 @@ import PrevEventImages from "../sections/PrevEventImages.astro";
   <main class="overflow-x-hidden relative">
     <Hero />
     <PrevEventImages />
+    <AboutCMFest />
+    <PastFestival />
+    <ThisYear />
+    <FAQs client:load/>
+    <Footer />
   </main>
 </Layout>
 

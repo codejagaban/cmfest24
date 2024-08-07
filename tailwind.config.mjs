@@ -10,11 +10,14 @@ export default {
 		  'bg-azure': '#018FFB',
 		  'bg-bittersweet': '#FD6A63',
 		  'goldenrod': '#FDBF3D',
-		  'bg-turquoise-light': '#02D6C8', // Corrected from #FD6A63 to #02D6C8
+		  'bg-turquoise-light': '#02D6C8',
 		  'text-turquoise': '#04D5C9',
 		  'text-goldenrod': '#FDBF3D',
 		  'text-primary': '#F8F8FF',
 		  'text-secondary': '#121121',
+		},
+		backgroundImage: {
+		  'this-year': "url('./src/images/thisyear.png')",
 		},
 	  },
 	},
