@@ -52,7 +52,7 @@ export default function Header() {
                 <a href="#" onClick={() => setToggle(false)}>
                   Agenda
                 </a>
-                <a href="#" onClick={() => setToggle(false)}>
+                <a href="#faq" onClick={() => setToggle(false)}>
                   FAQ
                 </a>
                 <a href="#" onClick={() => setToggle(false)}>
