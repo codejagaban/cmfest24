@@ -35,8 +35,8 @@ const FAQs = () => {
   return (
     <div id="faq" className="container flex items-center justify-between py-20 mx-auto max-w-7xl px-3 sm:px-6 md:px-10 text-bg-primary">
       <div className="container">
-        <h2 className="text-5xl font-semibold tracking-tighter">FAQs</h2>
-        <div className="mt-12">
+        <h2 className="text-3xl sm:text-5xl font-semibold tracking-tighter">FAQs</h2>
+        <div className="mt-8">
           {items.map((item, index) => (
             <AccordionItem key={index} question={item.question} answer={item.answer} />
           ))}

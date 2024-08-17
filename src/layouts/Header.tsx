@@ -10,7 +10,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 bg-bg-primary h-24 backdrop-blur-md z-50">
+    <header className="sticky top-0 bg-bg-primary h-24 z-50 flex items-center">
       <div className="container py-10 mx-auto max-w-7xl px-3 sm:px-6 md:px-10">
         <div className="flex items-center justify-between">
           <img src="/Logos.svg" alt="CMFest Africa" height={120} width={120} />
