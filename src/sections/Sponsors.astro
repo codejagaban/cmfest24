@@ -1,0 +1,57 @@
+---
+import { Image } from "astro:assets";
+import Spotify from "../images/spotify.svg";
+import Canva from "../images/canva.svg";
+import Universal from "../images/universal.svg";
+import Button from "../components/Button";
+---
+
+<div class="container py-20 mx-auto max-w-7xl px-3 sm:px-6 md:px-10">
+  <div class="grid grid-cols-1 md:grid-cols-[1fr,2fr] gap-8 items-center">
+    <div class="flex gap-4 flex-col items-start">
+      <div class="flex flex-col gap-4 items-start">
+        <h2 class="text-3xl md:text-4xl font-semibold tracking-tighter">
+          Our 2024 Sponsors
+        </h2>
+        <p class="text-bg-primary text-base">
+          As a sponsor, we are promising to reach thousands of community
+          managers in Africa who are interested in your brand.
+        </p>
+        <Button
+          body="Buy your Tickets"
+          icon="/arrow_right_up.svg"
+          className="bg-goldenrod text-text-secondary font-semibold px-5 py-3 rounded-md border-[1px] border-bg-primary"
+        />
+      </div>
+    </div>
+    <div class="grid grid-cols-3 md:grid-cols-3 gap-2 w-full mt-10 px-2">
+      <div class="border-[1px] border-bg-primary p-5 md:p-6 flex items-center justify-center">
+        <Image src={Spotify} alt="Spotify" class="h-10 w-auto object-contain" />
+      </div>
+      <div class="border-[1px] border-bg-primary p-5 md:p-6 flex items-center justify-center">
+        <Image src={Canva} alt="Canva" class="h-10 w-auto object-contain" />
+      </div>
+      <div class="border-[1px] border-bg-primary p-5 md:p-6 flex items-center justify-center">
+        <Image src={Universal} alt="Universal" class="h-10 w-auto object-contain" />
+      </div>
+      <div class="border-[1px] border-bg-primary p-5 md:p-6 flex items-center justify-center">
+        <Image src={Spotify} alt="Spotify" class="h-10 w-auto object-contain" />
+      </div>
+      <div class="border-[1px] border-bg-primary p-5 md:p-6 flex items-center justify-center">
+        <Image src={Universal} alt="Universal" class="h-10 w-auto object-contain" />
+      </div>
+      <div class="border-[1px] border-bg-primary p-5 md:p-6 flex items-center justify-center">
+        <Image src={Spotify} alt="Spotify" class="h-10 w-auto object-contain" />
+      </div>
+      <div class="border-[1px] border-bg-primary p-5 md:p-6 flex items-center justify-center">
+        <Image src={Spotify} alt="Spotify" class="h-10 w-auto object-contain" />
+      </div>
+      <div class="border-[1px] border-bg-primary p-5 md:p-6 flex items-center justify-center">
+        <Image src={Canva} alt="Canva" class="h-10 w-auto object-contain" />
+      </div>
+      <div class="border-[1px] border-bg-primary p-5 md:p-6 flex items-center justify-center">
+        <Image src={Universal} alt="Universal" class="h-10 w-auto object-contain" />
+      </div>
+    </div>
+  </div>
+</div>

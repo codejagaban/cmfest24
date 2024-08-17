@@ -8,6 +8,7 @@ import ThisYear from "../sections/ThisYear.astro";
 import Speakers from "../sections/Speakers.tsx";
 import Footer from "../sections/Footer.astro";
 import PrevEventImages from "../sections/PrevEventImages.astro";
+import Sponsors from "../sections/Sponsors.astro";
 ---
 
 <Layout title="#CMFest24 - The festival for community managers.">
@@ -18,6 +19,7 @@ import PrevEventImages from "../sections/PrevEventImages.astro";
     <PastFestival />
     <ThisYear />
     <Speakers client:load/>
+    <Sponsors />
     <FAQs client:load/>
     <Footer />
   </main>
