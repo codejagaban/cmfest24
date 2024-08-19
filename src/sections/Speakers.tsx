@@ -64,8 +64,7 @@ const speakers = [
 
 const Speakers = () => {
   return (
-    <div className="container flex items-center justify-between py-20 mx-auto max-w-7xl px-3 sm:px-6 md:px-10 text-bg-primary">
-      <div className="container">
+    <section className="container grid grid-cols-1 py-20 mx-auto max-w-7xl w-full px-3 sm:px-6 md:px-10 text-bg-primary">
         <div className="flex flex-col gap-2 mb-8">
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold tracking-tighter text-bg-primary">
             Our Rock-star Speakers & Panelist
@@ -74,7 +73,7 @@ const Speakers = () => {
             Meet the keynote speakers & panelist for this year&apos;s #CMFEST
           </p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mt-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mt-4 w-full">
           {speakers.map(({ speakerName, imageSrc, jobTitle, tag, index }) => (
             <Speaker
               key={index}
@@ -85,8 +84,7 @@ const Speakers = () => {
             />
           ))}
         </div>
-      </div>
-    </div>
+    </section>
   );
 };
 
