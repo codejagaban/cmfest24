@@ -5,8 +5,8 @@ import Canva from "../images/canva.svg";
 import Universal from "../images/universal.svg";
 ---
 
-<section class="container py-20 mx-auto max-w-7xl px-3 sm:px-6 md:px-10">
-  <div class="flex gap-4 flex-col items-start">
+<section id="cmfest-section" class="container py-20 mx-auto max-w-7xl px-3 sm:px-6 md:px-10">
+  <div class="fade-up flex gap-4 flex-col items-start">
     <h1 class="text-3xl text-bg-primary font-semibold">About CMFEST</h1>
     <div class="flex flex-col gap-6">
       <p class="text-bg-primary text-base">
@@ -27,7 +27,7 @@ import Universal from "../images/universal.svg";
       </p>
     </div>
   </div>
-  <div class="grid grid-cols-3 md:grid-cols-6 gap-10 w-full mt-10 px-2">
+  <div class="fade-up grid grid-cols-3 md:grid-cols-6 gap-10 w-full mt-10 px-2">
     <Image
       src={Spotify}
       alt="Spotify"
@@ -59,7 +59,7 @@ import Universal from "../images/universal.svg";
       class="h-10 w-auto"
     />
   </div>
-  <div class="grid grid-cols-3 md:grid-cols-6 gap-10 w-full mt-10 px-2">
+  <div class="fade-up grid grid-cols-3 md:grid-cols-6 gap-10 w-full mt-10 px-2">
     <Image
       src={Spotify}
       alt="Spotify"
@@ -92,3 +92,29 @@ import Universal from "../images/universal.svg";
     />
   </div>
 </section>
+
+<style>
+.fade-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-up.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+        observer.unobserve(entry.target);
+      }
+    });
+  });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>

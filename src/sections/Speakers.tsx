@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import Speaker from "../components/Speaker";
 import preciousImage from "../images/precious.png";
 import felixImage from "../images/felix.png";
@@ -9,6 +10,8 @@ const speakers = [
     speakerName: "Precious Ezema",
     jobTitle: "Community Manager",
     tag: "Speaker",
+    linkedinProfile: '/https://linkedin.com/profile',
+    xProfile: '/https://x.com/@me',
     index: 1,
   },
   {
@@ -16,6 +19,8 @@ const speakers = [
     speakerName: "Felix Ayoola",
     jobTitle: "Developer Advocate",
     tag: "Speaker",
+    linkedinProfile: '/https://linkedin.com/profile',
+    xProfile: '/https://x.com/@me',
     index: 2,
   },
   {
@@ -23,6 +28,8 @@ const speakers = [
     speakerName: "Ada Nduka Uyom",
     jobTitle: "Founder, SheCodeAfrica",
     tag: "Speaker",
+    linkedinProfile: '/https://linkedin.com/profile',
+    xProfile: '/https://x.com/@me',
     index: 3,
   },
   {
@@ -30,6 +37,8 @@ const speakers = [
     speakerName: "Precious Ezema",
     jobTitle: "Community Manager",
     tag: "Speaker",
+    linkedinProfile: '/https://linkedin.com/profile',
+    xProfile: '/https://x.com/@me',
     index: 4,
   },
   {
@@ -37,6 +46,8 @@ const speakers = [
     speakerName: "Precious Ezema",
     jobTitle: "Community Manager",
     tag: "Speaker",
+    linkedinProfile: '/https://linkedin.com/profile',
+    xProfile: '/https://x.com/@me',
     index: 5,
   },
   {
@@ -44,6 +55,8 @@ const speakers = [
     speakerName: "Felix Ayoola",
     jobTitle: "Developer Advocate",
     tag: "Speaker",
+    linkedinProfile: '/https://linkedin.com/profile',
+    xProfile: '/https://x.com/@me',
     index: 6,
   },
   {
@@ -51,6 +64,8 @@ const speakers = [
     speakerName: "Ada Nduka Uyom",
     jobTitle: "Founder, SheCodeAfrica",
     tag: "Speaker",
+    linkedinProfile: '/https://linkedin.com/profile',
+    xProfile: '/https://x.com/@me',
     index: 7,
   },
   {
@@ -58,6 +73,8 @@ const speakers = [
     speakerName: "Precious Ezema",
     jobTitle: "Community Manager",
     tag: "Speaker",
+    linkedinProfile: '/https://linkedin.com/profile',
+    xProfile: '/https://x.com/@me',
     index: 8,
   },
 ];
@@ -73,17 +90,37 @@ const Speakers = () => {
             Meet the keynote speakers & panelist for this year&apos;s #CMFEST
           </p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mt-4 w-full">
-          {speakers.map(({ speakerName, imageSrc, jobTitle, tag, index }) => (
-            <Speaker
+        <motion.div
+          className="grid grid-cols-2 md:grid-cols-4 gap-10 mt-4 w-full"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          {speakers.map(({ speakerName, imageSrc, jobTitle, tag, linkedinProfile, xProfile, index }) => (
+            <motion.div
               key={index}
-              speakerName={speakerName}
-              imageSrc={imageSrc}
-              jobTitle={jobTitle}
-              tag={tag}
-            />
+              whileHover={{ scale: 1.05 }}
+              className="relative"
+            >
+              <Speaker
+                speakerName={speakerName}
+                imageSrc={imageSrc}
+                jobTitle={jobTitle}
+                tag={tag}
+              />
+              <motion.div
+                className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center text-white opacity-0 hover:opacity-100 transition-opacity duration-300"
+              >
+                <p className="text-lg">{speakerName}</p>
+                <div className="flex gap-3 mt-2">
+                  <a href={linkedinProfile} className="text-white hover:text-gray-300">LinkedIn</a>
+                  <a href={xProfile} className="text-white hover:text-gray-300">X</a>
+                </div>
+              </motion.div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
     </section>
   );
 };
