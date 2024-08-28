@@ -12,39 +12,53 @@ import Email from "../images/icons/email.svg";
   >
     <div class="flex gap-6 flex-col items-center py-4">
       <div class="flex items-center mb-3">
-        <nav class="grid grid-cols-4 md:grid-cols-6 items-center text-center gap-6 text-white text-base font-medium">
-          <a href="#">About</a>
-          <a href="#">Sponsors</a>
-          <a href="#">Speakers</a>
-          <a href="#">Agenda</a>
+        <nav
+          class="grid grid-cols-4 md:grid-cols-6 items-center text-center gap-6 text-white text-base font-medium"
+        >
+          <a href="#about">About</a>
+          <a href="#sponsors">Sponsors</a>
+          <a href="#speakers">Speakers</a>
+          <a href="#agenda">Agenda</a>
           <a href="#faq">FAQ</a>
           <a href="#" class="whitespace-nowrap"> Buy Tickets </a>
         </nav>
       </div>
       <div class="flex gap-5 justify-between items-center">
         <div class="bg-white p-2 rounded-full">
-          <Image src={Twitter} alt="Twitter" class="h-6 w-6 text-bg-primary" />
+          <a href="https://x.com/cmfestafrica" target="_blank">
+            <Image
+              src={Twitter}
+              alt="Twitter"
+              class="h-6 w-6 text-bg-primary"
+            />
+          </a>
         </div>
         <div class="bg-white p-2 rounded-full">
-          <Image
-            src={Instagram}
-            alt="Instagram"
-            class="h-6 w-6 text-bg-primary"
-          />
+          <a href="https://www.instagram.com/cmfestafrica/" target="_blank">
+            <Image
+              src={Instagram}
+              alt="Instagram"
+              class="h-6 w-6 text-bg-primary"
+            />
+          </a>
         </div>
         <div class="bg-white p-2 rounded-full">
-          <Image
-            src={Facebook}
-            alt="Facebook"
-            class="h-6 w-6 text-bg-primary"
-          />
+          <a href="https://www.facebook.com/cmfestafrica" target="_blank">
+            <Image
+              src={Facebook}
+              alt="Facebook"
+              class="h-6 w-6 text-bg-primary"
+            />
+          </a>
         </div>
         <div class="bg-white p-2 rounded-full">
-          <Image src={Email} alt="Email" class="h-6 w-6 text-bg-primary" />
+          <a href="mailto:mail@cmfest.africa">
+            <Image src={Email} alt="Email" class="h-6 w-6 text-bg-primary" />
+          </a>
         </div>
       </div>
     </div>
-    <div class="bg-white w-full h-[2px]"/>
+    <div class="bg-white w-full h-[2px]"></div>
     <div class="flex items-center py-4">
       <p class="text-white text-base">All rights reserved &copy; 2024 CMFEST</p>
     </div>

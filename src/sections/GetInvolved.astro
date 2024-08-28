@@ -4,17 +4,17 @@ import ArrowUp from "../images/arrow_right.svg";
 import Button from "../components/Button";
 ---
 
-<section class="bg-bg-primary h-[calc(100vh-100px)] flex items-center justify-center mt-40 py-20 relative">
+<section class="bg-bg-primary flex items-center justify-center mt-40 py-20 relative">
   <div
     class="flex flex-col py-10 w-full mx-auto max-w-7xl px-3 sm:px-6 md:px-10"
   >
     <h2 class="text-3xl font-semibold tracking-tighter text-white">
       How to get involved
     </h2>
-    <div class="grid grid-cols-1 gap-10 py-6 w-full mt-6">
+    <div class="grid grid-cols-1 gap-10 py-6 w-full mt-10 px-3">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 relative">
         <!-- Attend Card -->
-        <div class="relative bg-white z-10 rounded-xl pt-6 h-48">
+        <div class="relative bg-white z-10 rounded-xl pt-6 h-56">
           <div
             class="absolute bg-azure flex items-center justify-between rounded-xl bottom-1 left-1 -right-2 -top-3 z-20"
           >
@@ -39,7 +39,7 @@ import Button from "../components/Button";
         </div>
 
         <!-- Speak Card -->
-        <div class="relative bg-white z-10 rounded-xl pt-6 h-48">
+        <div class="relative bg-white z-10 rounded-xl pt-6 h-56">
           <div
             class="absolute bg-bittersweet flex items-end rounded-xl bottom-1 left-1 -right-2 -top-3 z-20 p-8"
           >
@@ -47,12 +47,11 @@ import Button from "../components/Button";
               <div>
                 <h3 class="text-2xl font-semibold text-text-secondary">Speak</h3>
                 <p class="text-text-secondary mt-2">
-                  The Community Managers Festival will bring together speakers...
+                  Want to share your knowledge with like minds? Then click on the button to apply to speak at #CMFEST24.
                 </p>
               </div>
               <Button
                 body="Apply"
-                icon="/arrow_right_up.svg"
                 className="bg-transparent text-text-secondary font-semibold absolute top-4 right-4"
               />
             </div>
@@ -61,9 +60,9 @@ import Button from "../components/Button";
       </div>
 
       <!-- Sponsor Card -->
-      <div class="relative bg-white z-10 rounded-xl pt-6 h-[310px] sm:h-56 md:h-48">
+      <div class="relative bg-white z-10 rounded-xl pt-6 h-[310px] sm:h-56 md:h-56">
         <div
-          class="absolute bg-turquoiseLight flex flex-col rounded-xl bottom-1 left-1 -right-2 -top-3 z-20 pt-8 px-8 pb-4 h-fit md:h-48"
+          class="absolute bg-turquoiseLight flex flex-col rounded-xl bottom-1 left-1 -right-2 -top-3 z-20 p-8"
         >
           <div class="flex flex-col justify-between w-full pt-6">
             <h3 class="text-2xl font-semibold text-text-secondary">Sponsor</h3>
@@ -75,7 +74,6 @@ import Button from "../components/Button";
               </p>
               <Button
                 body="See Sponsorship Packages"
-                icon="/arrow_right_up.svg"
                 className="bg-goldenrod text-text-secondary font-semibold px-5 py-4 rounded-md border-[1px] border-bg-primary whitespace-nowrap mt-6 md:mt-0"
               />
             </div>
