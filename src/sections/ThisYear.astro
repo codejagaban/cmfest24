@@ -1,0 +1,56 @@
+---
+import { Image } from "astro:assets";
+import Button from "../components/Button";
+import Thisyear from "../images/thisyear.png";
+---
+
+<section
+  id="this-year"
+  class="fade-up container flex flex-col md:flex-row items-center gap-10 md:justify-between py-20 mx-auto max-w-7xl px-3 sm:px-6 md:px-10"
+>
+  <div class="flex flex-col items-start gap-5 flex-1">
+    <h2 class="text-4xl font-semibold tracking-tighter">This Year!</h2>
+    <div class="flex flex-col gap-6 mr-4">
+      <p class="text-bg-primary text-base leading-6">
+        CMs Assemble! This year's Community Managers Africa Festival promises to
+        surpass all expectations. Attendees can look forward to engaging
+        workshops, insightful speakers, networking opportunities, and a vibrant
+        community atmosphere. Get ready for an unforgettable experience that
+        will elevate your skills and connections to new heights.
+      </p>
+    </div>
+    <Button
+      body="Buy your Tickets"
+      className="bg-goldenrod text-text-secondary font-semibold px-4 py-3 rounded-md border-[1px] border-bg-primary"
+    />
+  </div>
+  <div class="w-full flex-1">
+    <Image src={Thisyear} alt="this year cmfest" />
+  </div>
+</section>
+
+<style>
+.fade-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-up.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+        observer.unobserve(entry.target);
+      }
+    });
+  });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>

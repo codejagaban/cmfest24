@@ -1,13 +1,29 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import AboutCMFest from "../sections/AboutCMFest.astro";
 import Hero from "../sections/Hero.tsx";
+import FAQs from "../sections/FAQs.tsx";
+import PastFestival from "../sections/PastFestival.astro";
+import ThisYear from "../sections/ThisYear.astro";
+import Speakers from "../sections/Speakers.tsx";
+import Footer from "../sections/Footer.astro";
 import PrevEventImages from "../sections/PrevEventImages.astro";
+import Sponsors from "../sections/Sponsors.astro";
+import GetInvolved from "../sections/GetInvolved.astro";
 ---
 
 <Layout title="#CMFest24 - The festival for community managers.">
   <main class="overflow-x-hidden relative">
     <Hero />
     <PrevEventImages />
+    <AboutCMFest />
+    <PastFestival />
+    <ThisYear />
+    <Speakers client:load/>
+    <Sponsors />
+    <GetInvolved />
+    <FAQs client:load/>
+    <Footer />
   </main>
 </Layout>
 

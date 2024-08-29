@@ -8,7 +8,6 @@ import imgFive from '../images/ImageFive.png';
 import imgSix from '../images/ImageSix.png';
 import imgSeven from '../images/ImageSeven.png';
 import imgEight from '../images/ImageEight.png';
-import imgNine from '../images/ImageNine.png';
 
 const prevImages = [
   {
@@ -43,18 +42,14 @@ const prevImages = [
     imageSrc: imgEight,
     altText: 'ImageEight',
   },
-  {
-    imageSrc: imgNine,
-    altText: 'ImageNine',
-  },
 ];
 
 
 const firstColumn = prevImages.slice(0, 4);
-const secondColumn = prevImages.slice(4, 9);
+const secondColumn = prevImages.slice(4, 8);
 ---
 
-<div class="flex flex-col gap-2 w-full bg-bg-primary overflow-hidden">
+<section class="flex flex-col gap-2 w-full bg-bg-primary overflow-hidden">
   <div class="flex gap-1 w-full">
     {firstColumn.map(({ imageSrc, altText }) => (
       <div class="min-w-[25%]">
@@ -77,4 +72,4 @@ const secondColumn = prevImages.slice(4, 9);
       </div>
     ))}
   </div>
-</div>
+</section>
