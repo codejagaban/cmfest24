@@ -4,7 +4,10 @@ import Play from "../images/icons/play.svg";
 import Thumbnail from "../images/thumbnail.png";
 ---
 
-<section id="past-festivals" class="container py-20 mx-auto max-w-7xl px-3 sm:px-6 md:px-10">
+<section
+  id="past-festivals"
+  class="container py-20 mx-auto max-w-7xl px-3 sm:px-6 md:px-10"
+>
   <div class="fade-up flex gap-4 flex-col items-start">
     <h2 class="text-4xl font-semibold tracking-tighter">Past Festivals</h2>
     <div class="flex flex-col gap-6">
@@ -15,20 +18,39 @@ import Thumbnail from "../images/thumbnail.png";
       </p>
     </div>
   </div>
-  <div class="fade-up relative flex justify-center items-center w-full h-[520px] bg-bg-primary rounded-xl mt-10 overflow-hidden">
-    <div id="video-container" class="absolute inset-0 flex flex-col justify-end">
-      <Image src={Thumbnail} alt="Video Thumbnail" class="absolute inset-0 w-full h-full object-cover" id="thumbnail" />
-      <div class="absolute inset-0 bg-black bg-opacity-20 flex flex-col items-center justify-center"> 
+  <div
+    class="fade-up relative flex justify-center items-center w-full h-[520px] bg-bg-primary rounded-xl mt-10 overflow-hidden"
+  >
+    <div
+      id="video-container"
+      class="absolute inset-0 flex flex-col justify-end"
+    >
+      <Image
+        src={Thumbnail}
+        alt="Video Thumbnail"
+        class="absolute inset-0 w-full h-full object-cover"
+        id="thumbnail"
+      />
+      <div
+        class="absolute inset-0 bg-black bg-opacity-20 flex flex-col items-center justify-center"
+      >
       </div>
-      <div class="absolute inset-0 flex items-center justify-center" id="play-button">
+      <div
+        class="absolute inset-0 flex items-center justify-center cursor-pointer"
+        id=""
+      >
         <h1 class="text-white text-3xl font-semibold">CMFest 2023 Recap</h1>
       </div>
-      <div class="absolute bottom-0 w-full bg-gradient-to-t from-black via-transparent to-transparent p-4 flex justify-between items-center">
-        <div class="flex items-center gap-3 text-white" id="play-button">
+      <div
+        class="absolute bottom-0 w-full bg-gradient-to-t from-black via-transparent to-transparent p-4 flex justify-between items-center"
+      >
+        <div class="flex items-center gap-3 text-white cursor-pointer" id="play-button">
           <Image src={Play} alt="Play Video" class="h-10 w-auto text-white" />
           <p class="text-lg">Play Video</p>
         </div>
-        <p class="text-lg hidden md:inline-block text-white font-semibold">Community Managers Festival 2023 Recap</p>
+        <p class="text-lg hidden md:inline-block text-white font-semibold">
+          Community Managers Festival 2023 Recap
+        </p>
       </div>
     </div>
     <iframe
@@ -37,33 +59,34 @@ import Thumbnail from "../images/thumbnail.png";
       src="https://www.youtube.com/embed/rhu8oaPHrJ4?autoplay=1&modestbranding=1"
       frameborder="0"
       allow="encrypted-media"
-      allowfullscreen
-    ></iframe>
+      allowfullscreen></iframe>
   </div>
 </section>
 
 <style>
-.fade-up {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
+  .fade-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition:
+      opacity 0.8s ease-out,
+      transform 0.8s ease-out;
+  }
 
-.fade-up.animate {
-  opacity: 1;
-  transform: translateY(0);
-}
+  .fade-up.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
 </style>
-
+<script src="../scripts/local.js"></script>
 <script>
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('animate');
+        entry.target.classList.add("animate");
         observer.unobserve(entry.target);
       }
     });
   });
 
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  document.querySelectorAll(".fade-up").forEach((el) => observer.observe(el));
 </script>
