@@ -53,15 +53,15 @@ export default function Header() {
                 <a href="#about" onClick={() => setToggle(false)}>
                   About
                 </a>
-                <a href="#sponsors" onClick={() => setToggle(false)}>
+                {/* <a href="#sponsors" onClick={() => setToggle(false)}>
                   Sponsors
-                </a>
-                <a href="#speakers" onClick={() => setToggle(false)}>
+                </a> */}
+                {/* <a href="#speakers" onClick={() => setToggle(false)}>
                   Speakers
-                </a>
-                <a href="#agenda" onClick={() => setToggle(false)}>
+                </a> */}
+                {/* <a href="#agenda" onClick={() => setToggle(false)}>
                   Agenda
-                </a>
+                </a> */}
                 <a href="#faq" onClick={() => setToggle(false)}>
                   FAQ
                 </a>
@@ -76,9 +76,9 @@ export default function Header() {
           </AnimatePresence>
           <nav className="hidden lg:flex items-center gap-10 text-text-primary text-sm">
             <a href="#about">About</a>
-            <a href="#sponsors">Sponsors</a>
-            <a href="#speakers">Speakers</a>
-            <a href="#agenda">Agenda</a>
+            {/* <a href="#sponsors">Sponsors</a> */}
+            {/* <a href="#speakers">Speakers</a> */}
+            {/* <a href="#agenda">Agenda</a> */}
             <a href="#faq">FAQ</a>
             <Button
               body="Buy Tickets"

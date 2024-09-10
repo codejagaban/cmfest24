@@ -5,13 +5,15 @@ interface Props {
   onClick?: () => void;
   className?: string;
   iconClassName?: string;
+  href?: string;
 }
 
-const Button: React.FC<Props> = ({ body, onClick, className = '', iconClassName = '' }) => {
+const Button: React.FC<Props> = ({ body, onClick, className = '', iconClassName = '', href }) => {
   return (
-    <button
+    <a
       className={`px-4 py-2 font-semibold rounded-md flex items-center space-x-2 ${className} group`}
       onClick={onClick}
+      href={href}
     >
       <div className="flex flex-col items-start">
         <span className="block text-sm">
@@ -35,7 +37,7 @@ const Button: React.FC<Props> = ({ body, onClick, className = '', iconClassName 
           />
         </svg>
       </span>
-    </button>
+    </a>
   );
 };
 
