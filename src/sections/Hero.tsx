@@ -23,6 +23,7 @@ export default function Hero() {
           <Button
             body="Buy your Tickets"
             className="bg-goldenrod text-text-secondary font-bold px-10 py-3 border-none rounded-md"
+            href="https://tix.africa/cmfest24"
           />
         </div>
       </div>

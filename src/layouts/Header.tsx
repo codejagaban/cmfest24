@@ -67,8 +67,8 @@ export default function Header() {
                 </a>
                 <Button
                   body="Buy your Tickets"
-                  onClick={() => setToggle(false)}
                   iconClassName="text-text-secondary font-bold"
+                  href="https://tix.africa/cmfest24"
                   className="bg-goldenrod text-text-secondary font-bold"
                 />
               </motion.nav>
@@ -82,7 +82,7 @@ export default function Header() {
             <a href="#faq">FAQ</a>
             <Button
               body="Buy Tickets"
-              onClick={() => setToggle(false)}
+               href="https://tix.africa/cmfest24"
               iconClassName="text-white"
               className="bg-transparent text-white font-bold"
             />

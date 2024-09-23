@@ -2,17 +2,17 @@ import React from 'react';
 
 interface Props {
   body: string;
-  onClick?: () => void;
   className?: string;
   iconClassName?: string;
   href?: string;
 }
 
-const Button: React.FC<Props> = ({ body, onClick, className = '', iconClassName = '', href }) => {
+const Button: React.FC<Props> = ({ body, className = '', iconClassName = '', href }) => {
   return (
     <a
       className={`px-4 py-2 font-semibold rounded-md flex items-center space-x-2 ${className} group`}
-      onClick={onClick}
+      target="_blank"
+      rel="noopener noreferrer"
       href={href}
     >
       <div className="flex flex-col items-start">
