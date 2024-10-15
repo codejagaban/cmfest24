@@ -5,7 +5,7 @@ export default function Hero() {
     <section id="hero" className="flex flex-col gap-20 items-center justify-center bg-bg-primary h-[calc(100vh-0px)] relative z-10">
       <div className="container px-4 sm:px-6 md:px-10 flex flex-col items-center text-center max-w-3xl scale-100 md:scale-125">
         <div className="text-xs md:text-sm font-semibold inline-flex bg-bg-secondary text-text-secondary rounded-md px-8 md:px-6 py-1 tracking-tight">
-          NOV 02, 2024 | LAGOS, NIGERIA
+          NOV 02, 2024 | Agape Events Place, Gbagada, Lagos, NIGERIA
         </div>
         <div className="my-4 flex flex-col gap-2 items-center">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-white to-[#f1f1f1] bg-clip-text text-transparent !leading-[1.1]">
@@ -17,11 +17,11 @@ export default function Hero() {
           </h1>
         </div>
         <p className="text-base text-text-primary tracking-tight">
-        A one-day hybrid event for community leaders, managers, and everyone in between to come together learn, network, and have conversations around building sustainable communities.
+        A hybrid event designed for community leaders, managers, and everyone in between. Join us to learn, network, and engage in conversations focused on building sustainable communities that drive business growth.
         </p>
         <div className="flex gap-1 items-center mt-[30px]">
           <Button
-            body="Buy your Tickets"
+            body="Save your Seat"
             className="bg-goldenrod text-text-secondary font-bold px-10 py-3 border-none rounded-md"
             href="https://tix.africa/cmfest24"
           />

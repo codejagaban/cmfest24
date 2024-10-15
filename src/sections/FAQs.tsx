@@ -5,29 +5,24 @@ const items = [
   {
     question: "Who is CMFest for?",
     answer:
-      "CMFest is Africa's largest festival for community builders in Africa. It’s also for leaders building community-driven brands and anyone interested in the community industry.",
+      "It’s for you. Whether you're a community manager, business leader, or someone passionate about building thriving communities, CMFEST is for you! ",
   },
   {
     question: "I want to send my entire team, will there be discounts?",
     answer:
-      "CMFest is Africa's largest festival for community builders in Africa. It’s also for leaders building community-driven brands and anyone interested in the community industry.",
+      "Absolutely! The more, the merrier. We’ve got special discounts for teams—just reach out to us at hi@cmfest.africa, and we’ll hook you up",
   },
   {
     question:
-      "I’d love to chat with the team on other ways to support the festival, how can I do that?",
+      "Will CMFEST be held in-person or online?",
     answer:
-      "CMFest is Africa's largest festival for community builders in Africa. It’s also for leaders building community-driven brands and anyone interested in the community industry.",
+      "Both!  You can join us in-person in Lagos or tune in from anywhere in the world online. Whether you’re on-site or at home in your pajamas, you’re in for a great time",
   },
   {
     question:
-      "I’d love to chat with the team on other ways to support the festival, how can I do that?",
+      "How can I chat with the team about other ways to support the festival?",
     answer:
-      "CMFest is Africa's largest festival for community builders in Africa. It’s also for leaders building community-driven brands and anyone interested in the community industry.",
-  },
-  {
-    question: "I’d love to hear more about CMFest, how can I do that?",
-    answer:
-      "CMFest is Africa's largest festival for community builders in Africa. It’s also for leaders building community-driven brands and anyone interested in the community industry.",
+      "We’d love to hear from you!  Whether it’s sponsorship, partnerships, or other fun ideas, send us a message at partnership@cmfest.africa, and we’ll make magic happen together.",
   },
 ];
 
