@@ -1,13 +1,12 @@
 ---
 import Header from './Header'
-import SeoImg from "../images/seo-bg.png";
+import image from "../images/seo-bg.png";
 interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
 const description = "A hybrid event designed for community leaders, managers, and everyone in between. Join us to learn, network, and engage in conversations focused on building sustainable communities that drive business growth."
-const image = SeoImg as string
 ---
 
 <!doctype html>
@@ -21,12 +20,12 @@ const image = SeoImg as string
  <!-- Open Graph and Twitter Card meta tags for social sharing -->
  <meta property="og:title" content={title} />
  <meta property="og:description" content={description} />
- <meta property="og:image" content={image} />
+ <meta property="og:image" content={image as unknown as string} />
  <meta property="og:url" content="https://www.cmfest.africa" />
- <meta name="twitter:card" content={image} />
+ <meta name="twitter:card" content={image as unknown as string} />
  <meta name="twitter:title" content={title} />
  <meta name="twitter:description" content={description} />
- <meta name="twitter:image" content={image} />
+ <meta name="twitter:image" content={image as unknown as string} />
     <title>{title}</title>
   </head>
   <body class="relative">
